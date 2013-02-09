@@ -1,0 +1,50 @@
+include<stdio.h>
+int leer matriz(int a,int b)
+{
+  int op;
+	op=a,b;
+	return op;
+}
+int suma matriz (int a,int b)
+{
+	int op;
+	op=a+b;
+	return op;
+}
+int imprime matriz(int a,int b)
+{
+	int op;
+	op=a+b;
+	return op;
+}
+
+int main(void)
+{
+	
+	int a[10],b[10],c[10];
+	int fl,co;
+	printf("INGRESA NUMERO DE FILAS:\n ");
+	scanf("%d",&fl);
+	printf("INGRESA NUMERO DE COLUMNAS: \n");
+	scanf("%d",&co);
+	for(int i=0;i<fl;i++)
+		for(int j=0;j<co;j++)
+		{
+			printf("INGRESA FILAS[%d][%d]: \n",i,j);
+			scanf("%d",&a[i][j]);
+		}
+	printf("\n");
+	for(int i=0;i<fl;i++)
+		for(int j=0;j<co;j++)
+		{
+			printf("INGRESA COLUMNAS[%d][%d]:\n ",i,j);
+			scanf("%d",&b[i][j]);
+		}
+	for(int i=0;i<fl;i++)
+		for(int j=0;j<co;j++)
+		{
+			op[i][j]=a[i][j]*b[i][j];
+			printf("%d*%d=%d\n",a[i][j],b[i][j],c[i][j]);
+			printf("EL RESULTADO ES [%d][%d] %d\n",i,j,op[i][j]);
+		}
+}
