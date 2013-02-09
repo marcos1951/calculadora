@@ -1,0 +1,138 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.1416;
+int main(void)
+{
+  int n1,n2,rs;
+	float num1,num2,r,lado;
+	float op=0;
+	int exit=0;
+	
+	do{
+		system("CLS");
+		system("color C0");
+		printf("MENU DE OPCIONES\n");
+		printf("1.- Suma\n");
+		printf("2.- Resta\n");
+		printf("3.- Multiplicacion\n");
+		printf("4.- Divicion\n");
+		printf("5.- Modulo\n");
+		printf("6.- Perimetro del circulo\n ");
+		printf("7.- Area del circulo\n");
+		printf("8.- Perimetro del cuadrado\n");
+		printf("9.- Area del cuadrado\n");
+		printf("10.- Multiplicacionde matrices\n");
+		printf("11.- Exit\n");
+		printf("\n");
+		scanf("%d",&rs);
+		printf("\n");
+		switch (rs){
+		case 1:
+			printf("SUMA\n");
+			printf("ingrese numero 1\n");
+			scanf("%f",&num1);
+			printf("ingrese numero 2\n");
+			scanf("%f",&num2);
+			op=num1+num2;
+			printf("El resultado es:%.2f\n",op);
+			break;
+			
+		case 2:
+			printf("RESTA\n");
+			printf("ingrese el numero 1\n");
+			scanf("%f",&num1);
+			printf("ingrese el numero 2\n");
+			scanf("%f",&num2);
+			if (num1>=num2) {
+				op=num1-num2;
+			} else {
+				op=num2-num1;	
+			}
+			printf("El resultado es:%.2f\n",op);
+			break;
+			
+		case 3:
+			printf("MULTIPLICACION \n");
+			printf("ingrese numero 1\n");
+			scanf("%f",&num1);
+			printf("ingrese nuemro 2\n");
+			scanf("%f",&num2);
+			op=num1*num2;
+			printf("El resultado es:%.2f\n",op);
+			break;
+		case 4:
+			printf("DIVICION\n");
+			printf("ingrese el numero 1\n");
+			scanf("%f",&num1);
+			printf("ingrese el numero 2\n");
+			scanf("%f",&num2);
+			if (num1==0 || num2==0) {
+				printf("no valido\n");
+			} else {
+				if(num1>=num2){
+					op=num1/num2;
+					printf("El resultado es:%.2f\n",op);
+				} else{
+					op=num2/num1;
+					printf("El resultado es:%f.2\n",op);
+				}
+			}
+			break;
+		case 5:
+			printf("MODULO\n");
+			printf("ingrese el numero 1\n");
+			scanf("%d",&n1);
+			printf("ingrese el numero 2\n");
+			scanf("%d",&n2);
+			if (n1==0 || n2==0) {
+				printf("no valido");
+			} else {
+				if (n1>=n2) 
+				{
+					rs=n1%n2;
+					printf("El resultado es:%d\n",rs);
+				} else {
+					rs=n2%n1;
+					printf("El resultado es:%d\n",rs);
+				}
+			}
+			break;		
+		case 6:
+			printf("PERIMETRO DEL CIRCULO\n");
+			printf("ingrese el radio del circulo\n");
+			scanf("%f",& r);
+			op=(2*3.1416*r);
+			printf("El perimetro del circulo es:%.2f\n",op);
+			break;
+			
+		case 7:
+			printf("AREA DEL CIRCULO\n");
+			printf("ingrese el radio del circulo\n");
+			scanf("%f",& r);
+			op=pi(r*r);
+			printf("El area del circulo es:%.2f\n",op);
+			break;
+			
+		case 8: 
+			printf("AREA DEL CUADRADO\n");
+			printf("ingresa el lado del cuadrado\n");
+			scanf("%f",&lado);
+			op=lado*lado;
+			printf("El perimetro del cuadrado es:%.2f\n",op);
+			break;
+		case 9:
+			printf("PERIMETRO DEL CIRCULO\n");
+			printf("ingre el lao del cuadrado\n");
+			scanf("%f",&lado);
+			op=lado+lado+lado+lado;
+			printf("El area del cuadrado es:%.2f\n",op);
+			break;
+		case 10:(exit= 1);
+			printf("SALIENDO DEL SISTEMA\n");
+			break;
+		default:
+			break;
+		}			
+		system("PAUSE");
+	}while(exit!=1);
+}
